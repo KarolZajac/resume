@@ -15,9 +15,9 @@
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .9rem;
-  --small-font-size: .8rem;
-  --smaller-font-size: .7rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
   
   --mb-1: .5rem;
   --mb-2: 1rem;
@@ -193,6 +193,76 @@ a{
   padding: 0 1.5rem;
 }
 
+/* sections */
+.section{
+  padding: 1.5rem 0;
+}
+
+.section__title{
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  margin: var(--mb-3);
+  margin-left: 0;
+}
+
+.section__subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+/* home */
+.home{
+  position: relative;
+}
+
+.home__container{
+  row-gap: 2rem;
+  position: relative;
+}
+
+.home__data{
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.home__image{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  justify-self: center;
+}
+
+.home__title{
+  font-size: var(--h1-font-size);
+}
+
+.home__profession{
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.home__address{
+  row-gap: 1rem;
+}
+
+.home__info{
+  display: flex;
+  align-items: center;
+}
+
+.home__icon{
+  font-size: 1.25rem;
+  margin-right: 0.25rem;
+}
+
+img{
+  max-width: 100%; /* to avoid overflow of image */
+  height: auto;
+}
+
 
 @media screen and (max-width: 320px){
   .nav__list{
@@ -230,5 +300,14 @@ a{
   .resume__left,
   .resume__right{
     padding: 0 1.5rem;
+  }
+
+  .section__title,
+  .profile__desc{
+    text-align: initial;
+  }
+
+  .home__container{
+    gap: 1.5rem;
   }
 }
