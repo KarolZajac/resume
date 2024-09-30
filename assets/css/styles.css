@@ -255,12 +255,12 @@ a {
 }
 
 .download_button {
-  display: flex;
   align-items: center;
   justify-self: center;
 }
 
 .home__button-mobil {
+  background-color: var(--container-color-alt);
   display: flex;
   align-items: center;
   border: 2px solid var(--text-color);
@@ -273,7 +273,7 @@ a {
 }
 
 .home__button-mobil:hover {
-  background-color: var(--text-color-light);
+  background-color: var(--text-color);
   color: var(--container-color);
 }
 
@@ -551,10 +551,10 @@ body.dark-theme {
 
 .dark-theme .scrolltop,
 .dark-theme .nav__toggle {
-  background-color: var(--container-color-alt);
+  background-color: #00000000;
 }
 
-.dark-theme .home__image{
+.dark-theme .home__image {
   background-color: var(--container-color-alt);
 }
 
@@ -744,18 +744,18 @@ body.scale-cv {
     display: none;
   }
 
-  .home__image{
+  .home__image {
     background-color: var(--container-color);
   }
 
-  .dark-theme .home__image{
+  .dark-theme .home__image {
     background-color: var(--container-color);
   }
 
   .contact__container {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .contact__content {
     justify-content: center;
   }
