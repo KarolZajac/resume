@@ -21,6 +21,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 // scroll links
 
 const sections = document.querySelectorAll('section[id]')
+const lastSection = sections.length > 0 ? sections[sections.length - 1] : null;
 
 const scrollActive = () => {
     const scrollY = window.pageYOffset
@@ -29,12 +30,34 @@ const scrollActive = () => {
         const sectionHeight = current.offsetHeight,
             sectionTop = current.offsetTop - 58,
             sectionId = current.getAttribute('id'),
-            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']'),
+            totalHeight = document.documentElement.scrollHeight,
+            viewportHeight = window.innerHeight
+
+        const scrollFromBottom = totalHeight - scrollY - viewportHeight
+        // console.log(current)
+        // console.log(scrollY)
+        // console.log(scrollFromBottom);
+        // console.log(sectionTop)
+        // console.log(sectionHeight)
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            sectionsClass.classList.add('active-link')
+            if (scrollFromBottom != 0) {
+                sectionsClass.classList.add('active-link')
+            }
+            else {
+                sectionsClass.classList.remove('active-link')
+            }
         } else {
             sectionsClass.classList.remove('active-link')
+        }
+
+        if (sectionId == lastSection.getAttribute('id')) {
+            if (scrollFromBottom == 0) {
+                sectionsClass.classList.add('active-link')
+            } else {
+                sectionsClass.classList.remove('active-link')
+            }
         }
     })
 }
