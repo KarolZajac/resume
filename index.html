@@ -73,12 +73,18 @@
 
                             <h1 class="home__title">Karol <b>Zając</b></h1>
                             <h3 class="home__profession">Scientific Programmer</h3>
-
+                            <div>
+                                <a download="" href="assets/pdf/KarolZajac_Resume.pdf" class="home__button-mobil">
+                                    <i class='bx bx-download home__icon'></i> Download
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Theme change button -->
-                    <i class="bx bxs-moon change-theme" id="theme-button"></i>
+                        <!-- Theme change button -->
+                        <i class="bx bxs-moon change-theme" id="theme-button"></i>
 
+                        <!-- Button to generate and download the pdf. Available for desktop. -->
+                        <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i>
+                    </div>
                 </section>
 
                 <section class="social section" id="social">
@@ -330,23 +336,26 @@
                     <h2 class="section__title">CONTACT</h2>
                     <div class="contact__container bd-grid">
                         <div class="contact__content">
-                            <ul class="contact__data">
-                                <li class="contact__element">
-                                    <span class="contact__info">
-                                        <i class='bx bx-envelope home__icon'></i> karol.zajac30@gmail.com
-                                    </span>
-                                </li>
-                                <li class="contact__element">
-                                    <span class="contact__info">
-                                        <i class='bx bx-phone home__icon'></i> +48 693 750 458
-                                    </span>
-                                </li>
-                                <li class="contact__element">
-                                    <span class="contact__info">
-                                        <i class='bx bx-map home__icon'></i> Cracow, Poland
-                                    </span>
-                                </li>
-                            </ul>
+                            <div class="contact__data">
+                                <span class="contact__info">
+                                    <i class='bx bx-envelope home__icon'></i> karol.zajac30@gmail.com
+                                </span>
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__data">
+                                <span class="contact__info">
+                                    <i class='bx bx-phone home__icon'></i> +48 693 750 458
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="contact__content">
+                            <div class="contact__data">
+                                <span class="contact__info">
+                                    <i class='bx bx-map home__icon'></i> Cracow, Poland
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -372,6 +381,7 @@
         <i class='bx bx-up-arrow-alt'></i>
     </a>
 
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
