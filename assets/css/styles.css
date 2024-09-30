@@ -555,7 +555,7 @@ body.dark-theme {
 }
 
 .dark-theme .home__image{
-  background-color: var(--container-color);
+  background-color: var(--container-color-alt);
 }
 
 .change-theme {
@@ -742,6 +742,14 @@ body.scale-cv {
 
   .home__button-mobil {
     display: none;
+  }
+
+  .home__image{
+    background-color: var(--container-color);
+  }
+
+  .dark-theme .home__image{
+    background-color: var(--container-color);
   }
 
   .contact__container {
