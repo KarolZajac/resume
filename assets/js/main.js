@@ -1,9 +1,17 @@
 // menu
 const navToggle = document.querySelector('#nav-toggle'),
-    navMenu = document.querySelector('#nav-menu');
+    navMenu = document.querySelector('#nav-menu'),
+    menuIcon = document.querySelector('#menu-icon');
 
 const showMenu = () => {
     navMenu.classList.toggle('show-menu')
+
+    // Toggle between two icons
+    if (navMenu.classList.contains('show-menu')) {
+        menuIcon.classList.replace('bx-grid-alt', 'bx-x');
+    } else {
+        menuIcon.classList.replace('bx-x', 'bx-grid-alt');
+    }
 }
 
 navToggle.addEventListener('click', showMenu);
@@ -13,6 +21,12 @@ const navLink = document.querySelectorAll('.nav__link')
 const linkAction = function () {
     const navMenu = document.querySelector('#nav-menu')
     navMenu.classList.remove('show-menu')
+    // Toggle between two icons
+    if (navMenu.classList.contains('show-menu')) {
+        menuIcon.classList.replace('bx-grid-alt', 'bx-x');
+    } else {
+        menuIcon.classList.replace('bx-x', 'bx-grid-alt');
+    }
 }
 
 navLink.forEach(n => n.addEventListener('click', linkAction))

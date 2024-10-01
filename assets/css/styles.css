@@ -28,7 +28,6 @@
   --font-semi-bold: 600;
 
   --z-tooltip: 10;
-  --z-fixed: 100;
 }
 
 *,
@@ -91,7 +90,7 @@ a {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: var(--z-fixed);
+  z-index: 10;
   background-color: var(--container-color-alt);
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
@@ -114,7 +113,7 @@ a {
     background-color: var(--container-color-alt);
     border-radius: 1rem 1rem 0 0;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    z-index: var(--z-fixed);
+    z-index: 3;
     transition: bottom 0.5s;
   }
 }
@@ -169,6 +168,17 @@ a {
 /* Show menu */
 .show-menu {
   bottom: calc(var(--header-height) + 1.4rem);
+}
+
+/* Transition for the icon */
+.nav__toggle i {
+  transition: transform 0.3s ease;
+  /* Smooth transition for icon rotation */
+}
+
+.nav__toggle i.bx-x {
+  transform: rotate(90deg) scale(1.2);
+  /* Rotate the 'x' icon for a smooth effect */
 }
 
 /* Active menu link */
@@ -769,7 +779,8 @@ body.scale-cv {
   }
 
   .l-header,
-  .scrolltop {
+  .scrolltop,
+  .nav__menu {
     display: none;
   }
 
