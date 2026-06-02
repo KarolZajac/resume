@@ -18,7 +18,7 @@
   --normal-font-size: .938rem;
   --small-font-size: .875rem;
   --smaller-font-size: .813rem;
-  --tiny-font-size: .5rem;
+  --tiny-font-size: .3rem;
 
   --mb-1: .5rem;
   --mb-2: 1rem;
@@ -343,7 +343,11 @@ img {
   grid-template-columns: repeat(5, 1fr);
   margin-top: 0.5rem;
   justify-content: space-around;
-  display: flex;
+  column-gap: 1.5rem;
+}
+
+.bd-grid.social_container{
+  display: grid;
   column-gap: 1.5rem;
 }
 
