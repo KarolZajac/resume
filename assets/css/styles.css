@@ -340,10 +340,11 @@ img {
 
 /* social */
 .social__container {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   margin-top: 0.5rem;
   justify-content: space-around;
   display: flex;
+  column-gap: 1.5rem;
 }
 
 .social__link {
@@ -663,7 +664,7 @@ body.scale-cv {
 
 .scale-cv .home__address,
 .scale-cv .social__container {
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .scale-cv .home__icon,
